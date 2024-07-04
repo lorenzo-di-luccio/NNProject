@@ -15,7 +15,7 @@ With only two more fixed parameters (a weight and a bias, i.e. a single neuron),
 The authors started from a pretrained DeiT transformer (we omitted the distillation part in our project for brevity, because it is not crucial for the final results) and then inserted the halting mechanism on top of that.
 
 ## A-ViT layer algorithm
-![alt text](https://github.com/lorenzo-di-luccio/NNProject-tmp/blob/main/assets/images/alg2.PNG)
+![alt text](https://github.com/lorenzo-di-luccio/NNProject/blob/main/assets/images/alg2.PNG)
 
 The modified version of the A-ViT layer algorithm, instead of simply computing the next hidden layer, perform some additional steps.
 
@@ -28,7 +28,7 @@ The modified version of the A-ViT layer algorithm, instead of simply computing t
 
 In the picture of the algorithm below, it is also showed the initial values and the relavant dimensions of the variables.
 
-![alt text](https://github.com/lorenzo-di-luccio/NNProject-tmp/blob/main/assets/images/alg1.PNG)
+![alt text](https://github.com/lorenzo-di-luccio/NNProject/blob/main/assets/images/alg1.PNG)
 
 ## Losses
 The total loss $\mathcal{L}$ is the sum of the task loss $\mathcal{L}\_{task}$ (classical cross-entropy loss for classification), the ponder loss $\mathcal{L}\_{ponder}$ (the average of the ponder vector, to encourage the tokens early stopping) and the distribution loss $\mathcal{L}\_{distr}$ (the KL divergence of the computed halting score probability distribution $\mathcal{H}$ and the target halting score probability distribution $\mathcal{H}\_{target}$, for regularization and to impose a preferred halting score probability distribution).
@@ -63,7 +63,7 @@ For more detailed results, plots, measures of inference time or for quickly runn
 | **F1 Score** | 0.7220 | 0.6873 | 0.7023 |
 
 ### Visual results
-![alt text](https://github.com/lorenzo-di-luccio/NNProject-tmp/blob/main/assets/results/visual_test.png)
+![alt text](https://github.com/lorenzo-di-luccio/NNProject/blob/main/assets/results/visual_test.png)
 
 ## Execution
 
